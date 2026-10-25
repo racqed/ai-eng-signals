@@ -1,0 +1,15 @@
+# Which local session logs may be read. Anything not matched is never opened.
+# Only aggregated numbers leave this machine; see AGENTS.md.
+
+[claude]
+# Folder-name globs under ~/.claude/projects (Claude Code names folders after the cwd).
+folders = ["*-orca-projects-*"]
+
+[codex]
+# A Codex session is read only if its cwd contains one of these.
+cwd_contains = ["/orca/projects/"]
+
+[aliases]
+# Optional public names for projects, keyed by the cwd's last folder name.
+# Projects not listed keep their folder name.
+"ai답변로봇" = "ai-answer-bot"

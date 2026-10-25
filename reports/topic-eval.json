@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-25",
+  "posts": 35,
+  "languages": {
+    "ko": 17,
+    "en": 18
+  },
+  "topics": {
+    "token-cost": 7,
+    "agent-workflow": 5,
+    "review-evals": 9,
+    "instructions-context": 7,
+    "career": 7
+  },
+  "reviewed_labels": 0,
+  "baseline": {
+    "method": "TF-IDF (1-2 grams) + logistic regression, 5-fold stratified CV, seed 0",
+    "majority_class_accuracy": 0.257,
+    "accuracy": 0.686,
+    "macro_f1": 0.644,
+    "f1_by_topic": {
+      "agent-workflow": 0.333,
+      "token-cost": 0.727,
+      "instructions-context": 0.737,
+      "review-evals": 0.696,
+      "career": 0.727
+    },
+    "confusion": {
+      "labels": [
+        "agent-workflow",
+        "token-cost",
+        "instructions-context",
+        "review-evals",
+        "career"
+      ],
+      "matrix": [
+        [
+          1,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          4
+        ]
+      ]
+    },
+    "predictions": {
+      "t1": "token-cost",
+      "t2": "token-cost",
+      "t3": "review-evals",
+      "t4": "review-evals",
+      "t5": "review-evals",
+      "t6": "review-evals",
+      "t7": "instructions-context",
+      "t8": "instructions-context",
+      "t9": "instructions-context",
+      "t10": "instructions-context",
+      "t11": "instructions-context",
+      "t12": "review-evals",
+      "t13": "review-evals",
+      "t14": "career",
+      "t15": "career",
+      "t16": "review-evals",
+      "t17": "review-evals",
+      "t18": "instructions-context",
+      "t19": "agent-workflow",
+      "t20": "review-evals",
+      "t21": "instructions-context",
+      "t22": "instructions-context",
+      "t23": "instructions-context",
+      "t24": "token-cost",
+      "t25": "token-cost",
+      "t26": "instructions-context",
+      "t27": "review-evals",
+      "t28": "review-evals",
+      "t29": "review-evals",
+      "t30": "review-evals",
+      "t31": "instructions-context",
+      "t32": "instructions-context",
+      "t33": "career",
+      "t34": "review-evals",
+      "t35": "career"
+    }
+  },
+  "llm": {
+    "method": "Zero-shot labelling by claude-haiku-5-5 via claude -p, one call for all posts",
+    "cost_usd": 0.00236325,
+    "accuracy": 0.914,
+    "macro_f1": 0.902,
+    "f1_by_topic": {
+      "agent-workflow": 0.667,
+      "token-cost": 1.0,
+      "instructions-context": 1.0,
+      "review-evals": 0.842,
+      "career": 1.0
+    },
+    "confusion": {
+      "labels": [
+        "agent-workflow",
+        "token-cost",
+        "instructions-context",
+        "review-evals",
+        "career"
+      ],
+      "matrix": [
+        [
+          3,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          7
+        ]
+      ]
+    },
+    "disagreements": [
+      "t21",
+      "t27",
+      "t31"
+    ]
+  }
+}

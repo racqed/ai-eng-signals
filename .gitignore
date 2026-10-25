@@ -1,0 +1,9 @@
+# Never commit: private terms for the privacy check, raw logs, local env
+.private-terms
+*.jsonl
+!tests/fixtures/*.jsonl
+.env*
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/

@@ -1,0 +1,356 @@
+{
+  "source": "https://ai-engineer-log.latteboo99.workers.dev/en/community",
+  "note": "Own-words English summaries of public Threads posts, as published on the AI Engineer Log. topic is the label assigned when the post was curated.",
+  "posts": [
+    {
+      "id": "t1",
+      "url": "https://www.threads.com/@steady__study.dev/post/DXS1fdGgWHR",
+      "author": "@steady__study.dev",
+      "lang": "ko",
+      "date": "2026-04-18",
+      "topic": "token-cost",
+      "summary": "After reading the Claude Code and Codex docs and source, the author names three ways coding agents leak tokens: text auto-attached to every session or turn, long tool outputs left in history, and extra calls from search, connectors and IDE integrations. A linked blog post covers the settings, env vars and flags that cut each one, and the trade-offs.",
+      "tip": "Audit the three leak paths separately: per-turn injected text, oversized tool output, and connector or IDE calls you don't need."
+    },
+    {
+      "id": "t2",
+      "url": "https://www.threads.com/@unclejobs.ai/post/DcKTQS8Ej0v",
+      "author": "@unclejobs.ai",
+      "lang": "ko",
+      "date": "2026-08-17",
+      "topic": "token-cost",
+      "summary": "Sums up Anthropic's Claude Code token-saving advice in one point: the prompt cache expires after an hour, so /compact is cheapest while the cache is still warm. The other five tips are in card images that weren't readable.",
+      "tip": "If you are going to compact, do it before you step away for an hour, while the prompt cache is still warm."
+    },
+    {
+      "id": "t3",
+      "url": "https://www.threads.com/@unclejobs.ai/post/DWfSzj2k5Ha",
+      "author": "@unclejobs.ai",
+      "lang": "ko",
+      "date": "2026-03-29",
+      "topic": "token-cost",
+      "summary": "Claude Code resends the whole conversation with every message, so a session that drifts from auth work into frontend work keeps paying for the stale auth history. Running /clear or starting a new session when the topic changes makes a noticeable difference.",
+      "tip": "Treat a topic switch as a trigger: /clear or open a new session."
+    },
+    {
+      "id": "t4",
+      "url": "https://www.threads.com/@seol.cc/post/DNAPqpaxMNH",
+      "author": "@seol.cc",
+      "lang": "ko",
+      "date": "2025-08-05",
+      "topic": "agent-workflow",
+      "summary": "Argues against heavy add-on frameworks such as SuperClaude: extra features burn tokens faster, lower output quality, and custom commands or agents often break the flow of context. Stock Claude Code plus a few custom commands, the agents you actually need, and MCP covers almost everything.",
+      "tip": "Start from stock Claude Code and add a command, agent or MCP server only when a real task needs it."
+    },
+    {
+      "id": "t5",
+      "url": "https://www.threads.com/@qjc.ai/post/DTPLkKoD9MF",
+      "author": "@qjc.ai",
+      "lang": "ko",
+      "date": "2026-01-07",
+      "topic": "review-evals",
+      "summary": "Part of a hooks thread: a Stop hook fires when Claude finishes responding and can carry a prompt asking it to check whether the work is really done, sending it back to work if tests fail or checklist items remain.",
+      "tip": "Add a Stop hook that checks tests and the task checklist before Claude is allowed to finish."
+    },
+    {
+      "id": "t6",
+      "url": "https://www.threads.com/@ai_developer_genie/post/DXqPK29k7bJ",
+      "author": "@ai_developer_genie",
+      "lang": "ko",
+      "date": "2026-04-27",
+      "topic": "agent-workflow",
+      "summary": "Says the real bottleneck in AI coding is a vague plan. Before coding, the author has a /grill-me skill interview them for about ten minutes, walking each branch of the decision tree until every branch has a recommended answer, and reports first-try implementations as a result.",
+      "tip": "Before implementation, have the agent interrogate your plan branch by branch until every open decision has an answer."
+    },
+    {
+      "id": "t7",
+      "url": "https://www.threads.com/@toy_crane911/post/DOulbdLEj5k",
+      "author": "@toy_crane911",
+      "lang": "ko",
+      "date": "2025-09-17",
+      "topic": "instructions-context",
+      "summary": "For people running Codex alongside Claude Code, keeping two instruction files in sync is a chore. Importing AGENTS.md from CLAUDE.md means only AGENTS.md needs maintaining.",
+      "tip": "Make AGENTS.md the single source of truth and import it from CLAUDE.md."
+    },
+    {
+      "id": "t8",
+      "url": "https://www.threads.com/@hyu_wo_/post/DXOAxA1CZmu",
+      "author": "@hyu_wo_",
+      "lang": "ko",
+      "date": "2026-04-16",
+      "topic": "instructions-context",
+      "summary": "Claude Code reads CLAUDE.md first and Codex reads AGENTS.md first, so adding a pointer in AGENTS.md to the relevant CLAUDE.md lets both tools follow the same rules in one folder. Skills carry over too, by syncing .claude/skills to .agents/skills once.",
+      "tip": "Point AGENTS.md at CLAUDE.md and sync .claude/skills to .agents/skills so Codex and Claude Code share one rule set."
+    },
+    {
+      "id": "t9",
+      "url": "https://www.threads.com/@unclejobs.ai/post/DVKLBMpE0P-",
+      "author": "@unclejobs.ai",
+      "lang": "ko",
+      "date": "2026-02-24",
+      "topic": "instructions-context",
+      "summary": "Summarises an experiment on the same codebases with no AGENTS.md, an LLM-generated one (e.g. /init) and a developer-written one. LLM-generated files did worse than none; hand-written files helped about 4% on average but varied by model, and Sonnet 4.5 dropped 2%.",
+      "tip": "Treat /init output as a draft only; keep what you would have written by hand and delete the rest."
+    },
+    {
+      "id": "t10",
+      "url": "https://www.threads.com/@choi.openai/post/DUIXT33Essv",
+      "author": "@choi.openai",
+      "lang": "ko",
+      "date": "2026-01-30",
+      "topic": "instructions-context",
+      "summary": "Relays a Vercel experiment: an 8KB compressed docs index in AGENTS.md reached a 100% pass rate, while on-demand Skills were often never invoked (56%) or used out of order (79% at best). The takeaway: keep everyday context in AGENTS.md and use Skills for specific jobs like migrations.",
+      "tip": "Put must-know context in the always-loaded file and keep Skills for occasional, task-specific procedures."
+    },
+    {
+      "id": "t11",
+      "url": "https://www.threads.com/@choi.openai/post/DWaYlojiFcf",
+      "author": "@choi.openai",
+      "lang": "ko",
+      "date": "2026-03-27",
+      "topic": "review-evals",
+      "summary": "Recommends using Codex as a first-pass GitHub PR reviewer that flags missing tests, security issues and thin docs before a human looks. Writing severity rules into AGENTS.md keeps reviews on the team's standard, and commenting '@codex fix it' has it fix and update the PR.",
+      "tip": "Write your review severity rubric into AGENTS.md so the review bot grades against team standards."
+    },
+    {
+      "id": "t12",
+      "url": "https://www.threads.com/@choi.openai/post/DQ_dQ4_Dyx2",
+      "author": "@choi.openai",
+      "lang": "ko",
+      "date": "2025-11-13",
+      "topic": "review-evals",
+      "summary": "Event recap: easy agent builders make workflows cheap to create, so evaluation is the real risk control. Speakers advised building evals before agent logic, using LLM graders, and feeding eval results back into prompt optimisation.",
+      "tip": "Write the eval set and grader before you write the agent."
+    },
+    {
+      "id": "t13",
+      "url": "https://www.threads.com/@choi.openai/post/DTqwNQugjKw",
+      "author": "@choi.openai",
+      "lang": "ko",
+      "date": "2026-01-18",
+      "topic": "review-evals",
+      "summary": "Reports that Cursor rebuilt its Bugbot review agent: it moved from running several passes over the same code and taking a majority vote to an agentic architecture, raising the share of flagged bugs that actually get fixed to over 70%.",
+      "tip": null
+    },
+    {
+      "id": "t14",
+      "url": "https://www.threads.com/@jmhong2020/post/DQSPetlEufT",
+      "author": "@jmhong2020",
+      "lang": "ko",
+      "date": null,
+      "topic": "career",
+      "summary": "An analysis of Korean large-company 'AI agent' job ads finds demand for applied engineers who solve business problems with LLMs rather than model researchers. Almost every ad asks for RAG and LangChain, roles target the company's own domain, and LLMOps skills for running services reliably also count.",
+      "tip": "Build a portfolio project that solves a real domain problem with RAG and show you can run it in production."
+    },
+    {
+      "id": "t15",
+      "url": "https://www.threads.com/@data.scientist.luna/post/DNME8fxzPWp",
+      "author": "@data.scientist.luna",
+      "lang": "ko",
+      "date": null,
+      "topic": "career",
+      "summary": "A working data scientist says AI tools (their company pays for Cursor) speed up part of the job but won't replace it soon. Three things stay human: stakeholder management, framing open-ended business problems as data problems, and resolving the ambiguity that comes with them.",
+      "tip": "Show problem framing and stakeholder work explicitly when you present yourself, not only modelling."
+    },
+    {
+      "id": "t16",
+      "url": "https://www.threads.com/@careerplan.be/post/DYmEZR_E7eL",
+      "author": "@careerplan.be",
+      "lang": "ko",
+      "date": null,
+      "topic": "career",
+      "summary": "On the 2026 job market: prove AI skills by writing up the problem, how you applied AI, and a numeric result, e.g. cutting competitor-review analysis from 20 to 3 hours a week. Listing tool names on a CV is weak; improvement cases beat certificates.",
+      "tip": "Write each AI project on your CV as problem, approach, measured result."
+    },
+    {
+      "id": "t17",
+      "url": "https://www.threads.com/@mrlattestory/post/DY0-Lk0Dod4",
+      "author": "@mrlattestory",
+      "lang": "ko",
+      "date": "2026-05-26",
+      "topic": "career",
+      "summary": "Cites reports of IBM tripling US junior developer hiring and Indeed developer postings up 11%. From their own use, auth and CRUD work that took days now takes half a day, and the freed time goes to asking whether a feature matters to users; jobs are changing shape, not disappearing.",
+      "tip": null
+    },
+    {
+      "id": "t18",
+      "url": "https://www.threads.com/@boris_cherny/post/DUMZuyJkpSJ",
+      "author": "@boris_cherny",
+      "lang": "en",
+      "date": "2026-01-31",
+      "topic": "instructions-context",
+      "summary": "From the Claude Code team's tips: after every correction, ask Claude to update CLAUDE.md so the mistake doesn't recur, then edit the file ruthlessly until the error rate measurably drops. One engineer has Claude keep a per-task notes directory, updated after every PR, and points CLAUDE.md at it.",
+      "tip": "End each correction with a request to update CLAUDE.md, then prune the file regularly."
+    },
+    {
+      "id": "t19",
+      "url": "https://www.threads.com/@boris_cherny/post/DUMZt4OEqoc",
+      "author": "@boris_cherny",
+      "lang": "en",
+      "date": "2026-01-31",
+      "topic": "agent-workflow",
+      "summary": "Start every complex task in plan mode and invest in the plan so the implementation lands first time. Team members have a second Claude review the plan as a staff engineer, go back to plan mode the moment things go sideways, and use plan mode for verification steps too.",
+      "tip": "When a run goes sideways, stop pushing and return to plan mode; optionally have a second session review the plan."
+    },
+    {
+      "id": "t20",
+      "url": "https://www.threads.com/@boris_cherny/post/DUMZxTWElFm",
+      "author": "@boris_cherny",
+      "lang": "en",
+      "date": "2026-01-31",
+      "topic": "review-evals",
+      "summary": "Turn Claude into the reviewer: have it quiz you on your changes before any PR, or prove the change works by diffing behaviour between main and the feature branch. After a mediocre fix, ask it to scrap it and implement the elegant solution, and write detailed specs up front.",
+      "tip": "Ask the agent to prove the change by comparing behaviour on main and on your branch."
+    },
+    {
+      "id": "t21",
+      "url": "https://www.threads.com/@boris_cherny/post/DWfjp2YFJS6",
+      "author": "@boris_cherny",
+      "lang": "en",
+      "date": "2026-03-29",
+      "topic": "agent-workflow",
+      "summary": "Recommends hooks for logic that must run at fixed points in the agent lifecycle: load context at SessionStart, log every bash command with PreToolUse, route permission prompts to WhatsApp via PermissionRequest, and nudge Claude to keep going on Stop.",
+      "tip": "Move anything that must always happen (context loading, logging, approvals) out of prompts and into hooks."
+    },
+    {
+      "id": "t22",
+      "url": "https://www.threads.com/@jatinw21/post/DVqsMD7CUtm",
+      "author": "@jatinw21",
+      "lang": "en",
+      "date": "2026-03-09",
+      "topic": "instructions-context",
+      "summary": "Reports a developer's 1,188 benchmark runs across 3 Claude models and 10 instruction profiles: every CLAUDE.md variant, from long rulesets down to 4 bullets, scored below an empty file. The developer had set out to validate his own compression advice; the post says this matches findings from Anthropic, HumanLayer and Arize.",
+      "tip": "Measure your instruction file against an empty baseline before assuming it helps."
+    },
+    {
+      "id": "t23",
+      "url": "https://www.threads.com/@paulirolla/post/Dai9_Z9CP_g",
+      "author": "@paulirolla",
+      "lang": "en",
+      "date": "2026-07-08",
+      "topic": "token-cost",
+      "summary": "A carousel of 17 token-saving habits for Claude Code; the visible nine include watching for loops, starting fresh chats, keeping CLAUDE.md lean, picking the right model, using subagents carefully, clearing before long breaks, and referencing files precisely instead of pasting them.",
+      "tip": "Reference files by path instead of pasting their contents into the chat."
+    },
+    {
+      "id": "t24",
+      "url": "https://www.threads.com/@semianalysis/post/DefEwBVFjmX",
+      "author": "@semianalysis",
+      "lang": "en",
+      "date": "2026-10-14",
+      "topic": "token-cost",
+      "summary": "Reports that Claude Code 2.1.299 added idle compaction: sessions with 200k+ context compact automatically after about 54 idle minutes, refreshing the 1-hour cache TTL so users don't pay for uncached input when they return.",
+      "tip": null
+    },
+    {
+      "id": "t25",
+      "url": "https://www.threads.com/@sung.kim.mw/post/DWryhDsE0ex",
+      "author": "@sung.kim.mw",
+      "lang": "en",
+      "date": "2026-04-03",
+      "topic": "token-cost",
+      "summary": "Framed as quoting Anthropic: making 1M-context Opus 4.6 the Claude Code default made people use far more tokens, and the fix is capping the auto-compact window at 200k in config.",
+      "tip": "If you don't need 1M context, set CLAUDE_CODE_AUTO_COMPACT_WINDOW=200000."
+    },
+    {
+      "id": "t26",
+      "url": "https://www.threads.com/@otolock/post/DV30iz5kYRE",
+      "author": "@otolock",
+      "lang": "en",
+      "date": "2026-03-14",
+      "topic": "token-cost",
+      "summary": "For people hitting Claude Code usage limits: make the first prompt specific. Name the exact file, describe expected versus actual behaviour and paste the error instead of saying 'fix the bug'. Only the first of the thread's tips was visible.",
+      "tip": "Open with file path, expected vs actual behaviour, and the exact error."
+    },
+    {
+      "id": "t27",
+      "url": "https://www.threads.com/@github/post/DcCAsfvGb-L",
+      "author": "@github",
+      "lang": "en",
+      "date": "2026-08-14",
+      "topic": "review-evals",
+      "summary": "GitHub notes that coding agents build features fast but often bundle them into one giant PR that is hard to review, and recommends breaking the work into a stack of small, ordered PRs.",
+      "tip": "Ask the agent to deliver work as a stack of small, ordered PRs rather than one large one."
+    },
+    {
+      "id": "t28",
+      "url": "https://www.threads.com/@dirkstoop/post/DNCwKYbOdzd",
+      "author": "@dirkstoop",
+      "lang": "en",
+      "date": "2025-08-06",
+      "topic": "review-evals",
+      "summary": "Argues that peer-reviewing every PR no longer scales once a team codes with AI. At Flux, pre-merge review is now the exception: a classifier scores every merged PR and the riskiest go into a ranked post-merge review queue ('Eventual Quality').",
+      "tip": "Route review effort by risk: classify changes and spend human attention on the riskiest."
+    },
+    {
+      "id": "t29",
+      "url": "https://www.threads.com/@sung.kim.mw/post/Dekapp9ks5u",
+      "author": "@sung.kim.mw",
+      "lang": "en",
+      "date": "2026-10-16",
+      "topic": "review-evals",
+      "summary": "Part of a thread on agent-driven testing: the approach surfaces many bugs even when existing tests pass, provided the agent checks expected results and application state changes, not just HTTP success codes. The parent post wasn't visible.",
+      "tip": "Make agent tests assert on resulting state and data, not on status codes."
+    },
+    {
+      "id": "t30",
+      "url": "https://www.threads.com/@tech.bakery/post/DdnDQ7UAoaE",
+      "author": "@tech.bakery",
+      "lang": "en",
+      "date": "2026-09-22",
+      "topic": "review-evals",
+      "summary": "Argues that 2,000 agent PRs a month is an infrastructure story, not a model story: the agents launch the app, use the real system, inspect state, read structured output, fix failures and rerun before opening a PR.",
+      "tip": "Give agents a way to run the app and read structured output so they can verify before opening a PR."
+    },
+    {
+      "id": "t31",
+      "url": "https://www.threads.com/@melvynxdev/post/DTiMGLplMaD",
+      "author": "@melvynxdev",
+      "lang": "en",
+      "date": "2026-01-15",
+      "topic": "agent-workflow",
+      "summary": "Three layers against accidental deletion: a CLAUDE.md rule to use trash instead of rm -rf, the trash CLI installed, and a Claude Code hook that refuses any rm -rf command.",
+      "tip": "Back up instruction-file rules with a PreToolUse hook that blocks destructive commands."
+    },
+    {
+      "id": "t32",
+      "url": "https://www.threads.com/@genai.works/post/DdpCOPNCFTD",
+      "author": "@genai.works",
+      "lang": "en",
+      "date": "2026-09-23",
+      "topic": "instructions-context",
+      "summary": "Habits for a reliable Claude Code project: keep CLAUDE.md under about 200 lines with conventions, build commands and layout, move checklists into skills, and turn any prompt you keep retyping (like 'review this') into a skill.",
+      "tip": "If you type the same prompt twice, turn it into a skill and take it out of CLAUDE.md."
+    },
+    {
+      "id": "t33",
+      "url": "https://www.threads.com/@jeromehardaway/post/DW4z3KDjwyt",
+      "author": "@jeromehardaway",
+      "lang": "en",
+      "date": "2026-04-08",
+      "topic": "career",
+      "summary": "A rough time split for an AI engineer in 2026: ~30% Python glue code between APIs and data, ~20% writing and running evals, ~20% meetings on prompts, cost and edge cases, ~15% reading yesterday's failure logs, plus user conversations and papers.",
+      "tip": "Practise eval writing and log-driven debugging; they take a big share of the job."
+    },
+    {
+      "id": "t34",
+      "url": "https://www.threads.com/@engineerhoon_2.0/post/DeCH1JlArR8",
+      "author": "@engineerhoon_2.0",
+      "lang": "en",
+      "date": null,
+      "topic": "career",
+      "summary": "Argues most developers don't need to train models; understanding APIs, context, evaluation, hallucinations, latency, cost, security and system design creates more real-world value than building a transformer from scratch.",
+      "tip": "Prioritise evaluation, cost/latency and system design over model training when retooling."
+    },
+    {
+      "id": "t35",
+      "url": "https://www.threads.com/@josesiles.data/post/Dd2_Ka4Dc3T",
+      "author": "@josesiles.data",
+      "lang": "en",
+      "date": "2026-09-28",
+      "topic": "career",
+      "summary": "A data practitioner says the definition of a skilled engineer is shifting fast: use AI to multiply output, understand data architecture and systems, know when AI is wrong and how to validate it, and turn vague business problems into technical solutions.",
+      "tip": "Build a habit of validating AI output against data and systems you understand."
+    }
+  ]
+}

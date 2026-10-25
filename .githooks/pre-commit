@@ -1,0 +1,7 @@
+#!/bin/sh
+# Blocks commits that contain local paths, raw session logs or private terms.
+# Enable once per clone: git config core.hooksPath .githooks
+PY=.venv/Scripts/python.exe
+[ -x "$PY" ] || PY=.venv/bin/python
+[ -x "$PY" ] || PY=python
+PYTHONPATH=src "$PY" -m ai_eng_signals.cli check-privacy --staged

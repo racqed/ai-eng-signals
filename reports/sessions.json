@@ -1,0 +1,1045 @@
+{
+  "summary": {
+    "period": [
+      "2026-10-24",
+      "2026-10-25"
+    ],
+    "agents": {
+      "claude-code": {
+        "sessions": 10,
+        "subagent_transcripts": 20,
+        "typed_prompts": 68,
+        "api_calls": 1234,
+        "input_tokens_processed": 185715080,
+        "output_tokens": 1184011,
+        "cache_read_share": 0.975,
+        "subagent_token_share": 0.105,
+        "tokens_per_typed_prompt": 2731104,
+        "tool_calls": 1605,
+        "tool_error_rate": 0.035,
+        "compactions": 4,
+        "median_session_minutes": 84.4,
+        "top_tools": {
+          "Bash": 785,
+          "Write": 203,
+          "WebFetch": 177,
+          "Read": 127,
+          "WebSearch": 99,
+          "Edit": 92,
+          "PowerShell": 26,
+          "Agent": 20
+        }
+      },
+      "codex": {
+        "sessions": 5,
+        "subagent_transcripts": 0,
+        "typed_prompts": 102,
+        "api_calls": 575,
+        "input_tokens_processed": 68836448,
+        "output_tokens": 247736,
+        "cache_read_share": 0.982,
+        "subagent_token_share": 0.0,
+        "tokens_per_typed_prompt": 674867,
+        "tool_calls": 500,
+        "tool_error_rate": null,
+        "compactions": 2,
+        "median_session_minutes": 134.4,
+        "top_tools": {
+          "exec": 391,
+          "js": 92,
+          "request_user_input_async": 9,
+          "wait": 8
+        }
+      }
+    },
+    "projects": {
+      "my-coffeechat": {
+        "sessions": 5,
+        "input_tokens_processed": 135302079,
+        "output_tokens": 583163,
+        "tool_calls": 885
+      },
+      "Ai-Engineer": {
+        "sessions": 1,
+        "input_tokens_processed": 49994802,
+        "output_tokens": 276806,
+        "tool_calls": 590
+      },
+      "my-website-2": {
+        "sessions": 2,
+        "input_tokens_processed": 29437980,
+        "output_tokens": 220194,
+        "tool_calls": 207
+      },
+      "lifeintheUKquiz": {
+        "sessions": 3,
+        "input_tokens_processed": 18614216,
+        "output_tokens": 179525,
+        "tool_calls": 238
+      },
+      "BrandProtectionAssistant": {
+        "sessions": 2,
+        "input_tokens_processed": 11001404,
+        "output_tokens": 88945,
+        "tool_calls": 116
+      },
+      "ai-answer-bot": {
+        "sessions": 1,
+        "input_tokens_processed": 10115001,
+        "output_tokens": 81811,
+        "tool_calls": 68
+      },
+      "our-wee-hoose": {
+        "sessions": 1,
+        "input_tokens_processed": 86046,
+        "output_tokens": 1303,
+        "tool_calls": 1
+      }
+    }
+  },
+  "sessions": [
+    {
+      "session": "005b68d04b",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "my-coffeechat",
+      "date": "2026-10-24",
+      "minutes": 84.0,
+      "human_prompts": 5,
+      "api_calls": 146,
+      "tool_calls": 160,
+      "tool_errors": 2,
+      "input_tokens": 292,
+      "output_tokens": 186310,
+      "cache_read_tokens": 27852506,
+      "cache_write_tokens": 289505,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 105,
+        "Write": 30,
+        "Read": 10,
+        "TaskStop": 5,
+        "PowerShell": 5,
+        "Edit": 2,
+        "ToolSearch": 1,
+        "Skill": 1,
+        "Agent": 1
+      }
+    },
+    {
+      "session": "09a9782e5e",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 7.0,
+      "human_prompts": 1,
+      "api_calls": 12,
+      "tool_calls": 13,
+      "tool_errors": 0,
+      "input_tokens": 24,
+      "output_tokens": 388,
+      "cache_read_tokens": 851601,
+      "cache_write_tokens": 119031,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 8,
+        "Read": 3,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "2421e2b939",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 5.1,
+      "human_prompts": 1,
+      "api_calls": 6,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "input_tokens": 12,
+      "output_tokens": 1144,
+      "cache_read_tokens": 269457,
+      "cache_write_tokens": 42742,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 3,
+        "Read": 1,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "25ecb0b3d5",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "my-coffeechat",
+      "date": "2026-10-24",
+      "minutes": 1136.6,
+      "human_prompts": 3,
+      "api_calls": 83,
+      "tool_calls": 107,
+      "tool_errors": 4,
+      "input_tokens": 166,
+      "output_tokens": 74716,
+      "cache_read_tokens": 12883179,
+      "cache_write_tokens": 373631,
+      "compactions": 1,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 55,
+        "Write": 23,
+        "Read": 11,
+        "Edit": 8,
+        "PowerShell": 5,
+        "ToolSearch": 2,
+        "TaskStop": 2,
+        "WebSearch": 1
+      }
+    },
+    {
+      "session": "68d36eb540",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 3.7,
+      "human_prompts": 1,
+      "api_calls": 11,
+      "tool_calls": 12,
+      "tool_errors": 1,
+      "input_tokens": 22,
+      "output_tokens": 91,
+      "cache_read_tokens": 564110,
+      "cache_write_tokens": 73960,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 10,
+        "Read": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "70258101cd",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 5.0,
+      "human_prompts": 1,
+      "api_calls": 7,
+      "tool_calls": 9,
+      "tool_errors": 1,
+      "input_tokens": 14,
+      "output_tokens": 195,
+      "cache_read_tokens": 341613,
+      "cache_write_tokens": 45046,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 4,
+        "Write": 2,
+        "Read": 1,
+        "Glob": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "719c511ebe",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "BrandProtectionAssistant",
+      "date": "2026-10-24",
+      "minutes": 47.3,
+      "human_prompts": 3,
+      "api_calls": 21,
+      "tool_calls": 26,
+      "tool_errors": 2,
+      "input_tokens": 36,
+      "output_tokens": 36941,
+      "cache_read_tokens": 1576181,
+      "cache_write_tokens": 109248,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Write": 14,
+        "Bash": 6,
+        "Edit": 2,
+        "AskUserQuestion": 1,
+        "ToolSearch": 1,
+        "ExitPlanMode": 1,
+        "Skill": 1
+      }
+    },
+    {
+      "session": "73a4413eb6",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 4.2,
+      "human_prompts": 1,
+      "api_calls": 10,
+      "tool_calls": 11,
+      "tool_errors": 0,
+      "input_tokens": 20,
+      "output_tokens": 370,
+      "cache_read_tokens": 583442,
+      "cache_write_tokens": 100251,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 7,
+        "Read": 3,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "adc0997dcc",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 5.8,
+      "human_prompts": 1,
+      "api_calls": 5,
+      "tool_calls": 7,
+      "tool_errors": 1,
+      "input_tokens": 10,
+      "output_tokens": 137,
+      "cache_read_tokens": 219410,
+      "cache_write_tokens": 50684,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 3,
+        "Write": 2,
+        "Read": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "b05e5d5134",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 5.6,
+      "human_prompts": 1,
+      "api_calls": 6,
+      "tool_calls": 7,
+      "tool_errors": 0,
+      "input_tokens": 12,
+      "output_tokens": 91,
+      "cache_read_tokens": 282959,
+      "cache_write_tokens": 47081,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 4,
+        "Read": 1,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "b2975a8391",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 15.1,
+      "human_prompts": 1,
+      "api_calls": 17,
+      "tool_calls": 18,
+      "tool_errors": 2,
+      "input_tokens": 34,
+      "output_tokens": 51553,
+      "cache_read_tokens": 1543847,
+      "cache_write_tokens": 145610,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 8,
+        "Write": 5,
+        "Edit": 4,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "b9030b2603",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 6.1,
+      "human_prompts": 1,
+      "api_calls": 5,
+      "tool_calls": 5,
+      "tool_errors": 0,
+      "input_tokens": 8,
+      "output_tokens": 154,
+      "cache_read_tokens": 146202,
+      "cache_write_tokens": 46224,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 2,
+        "Read": 1,
+        "Glob": 1,
+        "Write": 1
+      }
+    },
+    {
+      "session": "d7d692e8d8",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 1267.2,
+      "human_prompts": 3,
+      "api_calls": 80,
+      "tool_calls": 104,
+      "tool_errors": 2,
+      "input_tokens": 168,
+      "output_tokens": 116250,
+      "cache_read_tokens": 10415159,
+      "cache_write_tokens": 455594,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 41,
+        "Write": 34,
+        "Agent": 11,
+        "Edit": 10,
+        "ToolSearch": 2,
+        "WebFetch": 2,
+        "AskUserQuestion": 1,
+        "ExitPlanMode": 1,
+        "Skill": 1,
+        "Read": 1
+      }
+    },
+    {
+      "session": "db3578b97f",
+      "agent": "codex",
+      "kind": "main",
+      "project": "BrandProtectionAssistant",
+      "date": "2026-10-24",
+      "minutes": 134.4,
+      "human_prompts": 6,
+      "api_calls": 96,
+      "tool_calls": 90,
+      "tool_errors": null,
+      "input_tokens": 167011,
+      "output_tokens": 52004,
+      "cache_read_tokens": 9148928,
+      "cache_write_tokens": 0,
+      "compactions": 0,
+      "models": [
+        "gpt-6-sol"
+      ],
+      "tools": {
+        "exec": 83,
+        "js": 5,
+        "request_user_input_async": 2
+      }
+    },
+    {
+      "session": "e8b53d8f54",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 4.2,
+      "human_prompts": 1,
+      "api_calls": 5,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "input_tokens": 10,
+      "output_tokens": 158,
+      "cache_read_tokens": 197166,
+      "cache_write_tokens": 37475,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 2,
+        "Read": 1,
+        "Glob": 1,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "ea685eac58",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "my-coffeechat",
+      "date": "2026-10-24",
+      "minutes": 5.0,
+      "human_prompts": 1,
+      "api_calls": 16,
+      "tool_calls": 17,
+      "tool_errors": 0,
+      "input_tokens": 32,
+      "output_tokens": 529,
+      "cache_read_tokens": 1337312,
+      "cache_write_tokens": 132036,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 13,
+        "Read": 3,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "f3b4a2bcbc",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-24",
+      "minutes": 5.8,
+      "human_prompts": 1,
+      "api_calls": 7,
+      "tool_calls": 8,
+      "tool_errors": 0,
+      "input_tokens": 14,
+      "output_tokens": 233,
+      "cache_read_tokens": 354843,
+      "cache_write_tokens": 48705,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 4,
+        "Read": 1,
+        "Glob": 1,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "ff0a014790",
+      "agent": "codex",
+      "kind": "main",
+      "project": "my-coffeechat",
+      "date": "2026-10-24",
+      "minutes": 154.4,
+      "human_prompts": 19,
+      "api_calls": 171,
+      "tool_calls": 151,
+      "tool_errors": null,
+      "input_tokens": 385154,
+      "output_tokens": 70513,
+      "cache_read_tokens": 18304000,
+      "cache_write_tokens": 0,
+      "compactions": 1,
+      "models": [
+        "gpt-6-sol"
+      ],
+      "tools": {
+        "exec": 130,
+        "js": 20,
+        "wait": 1
+      }
+    },
+    {
+      "session": "0e9d3d5855",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "my-website-2",
+      "date": "2026-10-25",
+      "minutes": 2.8,
+      "human_prompts": 1,
+      "api_calls": 5,
+      "tool_calls": 5,
+      "tool_errors": 0,
+      "input_tokens": 10,
+      "output_tokens": 15475,
+      "cache_read_tokens": 177535,
+      "cache_write_tokens": 67022,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 5
+      }
+    },
+    {
+      "session": "1944fede55",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "our-wee-hoose",
+      "date": "2026-10-25",
+      "minutes": 0.2,
+      "human_prompts": 1,
+      "api_calls": 2,
+      "tool_calls": 1,
+      "tool_errors": 0,
+      "input_tokens": 4,
+      "output_tokens": 1303,
+      "cache_read_tokens": 72477,
+      "cache_write_tokens": 13565,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Read": 1
+      }
+    },
+    {
+      "session": "1ee8a0c21b",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 32.7,
+      "human_prompts": 1,
+      "api_calls": 27,
+      "tool_calls": 81,
+      "tool_errors": 10,
+      "input_tokens": 54,
+      "output_tokens": 315,
+      "cache_read_tokens": 3204667,
+      "cache_write_tokens": 328582,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "WebFetch": 47,
+        "WebSearch": 23,
+        "Bash": 6,
+        "Write": 2,
+        "SubagentHandback": 2,
+        "ToolSearch": 1
+      }
+    },
+    {
+      "session": "2e5a5f2cc6",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 3.9,
+      "human_prompts": 1,
+      "api_calls": 6,
+      "tool_calls": 7,
+      "tool_errors": 1,
+      "input_tokens": 12,
+      "output_tokens": 147,
+      "cache_read_tokens": 266309,
+      "cache_write_tokens": 73013,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 4,
+        "Read": 1,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "319af3b13f",
+      "agent": "codex",
+      "kind": "main",
+      "project": "my-website-2",
+      "date": "2026-10-25",
+      "minutes": 36.4,
+      "human_prompts": 2,
+      "api_calls": 44,
+      "tool_calls": 42,
+      "tool_errors": null,
+      "input_tokens": 67045,
+      "output_tokens": 36298,
+      "cache_read_tokens": 2884992,
+      "cache_write_tokens": 0,
+      "compactions": 0,
+      "models": [
+        "gpt-6.1-sol"
+      ],
+      "tools": {
+        "exec": 28,
+        "js": 10,
+        "wait": 4
+      }
+    },
+    {
+      "session": "3f709f6cfa",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "my-coffeechat",
+      "date": "2026-10-25",
+      "minutes": 210.0,
+      "human_prompts": 12,
+      "api_calls": 227,
+      "tool_calls": 252,
+      "tool_errors": 2,
+      "input_tokens": 454,
+      "output_tokens": 166152,
+      "cache_read_tokens": 36506730,
+      "cache_write_tokens": 368759,
+      "compactions": 1,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 196,
+        "Read": 30,
+        "PowerShell": 7,
+        "Write": 6,
+        "TaskStop": 4,
+        "WebFetch": 3,
+        "ToolSearch": 2,
+        "AskUserQuestion": 2,
+        "Edit": 1,
+        "Grep": 1
+      }
+    },
+    {
+      "session": "3f8ca5eab0",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 3.3,
+      "human_prompts": 1,
+      "api_calls": 7,
+      "tool_calls": 10,
+      "tool_errors": 0,
+      "input_tokens": 14,
+      "output_tokens": 398,
+      "cache_read_tokens": 338447,
+      "cache_write_tokens": 67564,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Read": 4,
+        "Bash": 4,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "42406e3d5b",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 10.2,
+      "human_prompts": 1,
+      "api_calls": 26,
+      "tool_calls": 77,
+      "tool_errors": 1,
+      "input_tokens": 52,
+      "output_tokens": 383,
+      "cache_read_tokens": 2071241,
+      "cache_write_tokens": 129352,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "WebFetch": 44,
+        "WebSearch": 31,
+        "ToolSearch": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "58bf228ad1",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 35.2,
+      "human_prompts": 1,
+      "api_calls": 28,
+      "tool_calls": 67,
+      "tool_errors": 2,
+      "input_tokens": 56,
+      "output_tokens": 210,
+      "cache_read_tokens": 2403570,
+      "cache_write_tokens": 240803,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "WebFetch": 52,
+        "WebSearch": 6,
+        "Bash": 4,
+        "SubagentHandback": 2,
+        "Write": 2,
+        "ToolSearch": 1
+      }
+    },
+    {
+      "session": "63bace9fab",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 9.1,
+      "human_prompts": 1,
+      "api_calls": 23,
+      "tool_calls": 70,
+      "tool_errors": 0,
+      "input_tokens": 46,
+      "output_tokens": 254,
+      "cache_read_tokens": 2054148,
+      "cache_write_tokens": 157575,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "WebSearch": 38,
+        "WebFetch": 29,
+        "ToolSearch": 1,
+        "Bash": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "78691ffdb5",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-25",
+      "minutes": 6.1,
+      "human_prompts": 1,
+      "api_calls": 12,
+      "tool_calls": 13,
+      "tool_errors": 2,
+      "input_tokens": 24,
+      "output_tokens": 4783,
+      "cache_read_tokens": 594153,
+      "cache_write_tokens": 26484,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 8,
+        "PowerShell": 2,
+        "Write": 1,
+        "Read": 1,
+        "Edit": 1
+      }
+    },
+    {
+      "session": "ab9cbffd65",
+      "agent": "codex",
+      "kind": "main",
+      "project": "my-coffeechat",
+      "date": "2026-10-25",
+      "minutes": 165.7,
+      "human_prompts": 70,
+      "api_calls": 240,
+      "tool_calls": 198,
+      "tool_errors": null,
+      "input_tokens": 536675,
+      "output_tokens": 84943,
+      "cache_read_tokens": 36331648,
+      "cache_write_tokens": 0,
+      "compactions": 1,
+      "models": [
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-6.1-sol"
+      ],
+      "tools": {
+        "exec": 137,
+        "js": 51,
+        "request_user_input_async": 7,
+        "wait": 3
+      }
+    },
+    {
+      "session": "c78f5a1c56",
+      "agent": "codex",
+      "kind": "main",
+      "project": "lifeintheUKquiz",
+      "date": "2026-10-25",
+      "minutes": 2.2,
+      "human_prompts": 5,
+      "api_calls": 24,
+      "tool_calls": 19,
+      "tool_errors": null,
+      "input_tokens": 69171,
+      "output_tokens": 3978,
+      "cache_read_tokens": 941824,
+      "cache_write_tokens": 0,
+      "compactions": 0,
+      "models": [
+        "gpt-6-sol"
+      ],
+      "tools": {
+        "exec": 13,
+        "js": 6
+      }
+    },
+    {
+      "session": "da5bad0f09",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "my-website-2",
+      "date": "2026-10-25",
+      "minutes": 63.5,
+      "human_prompts": 16,
+      "api_calls": 156,
+      "tool_calls": 160,
+      "tool_errors": 3,
+      "input_tokens": 316,
+      "output_tokens": 168421,
+      "cache_read_tokens": 25948182,
+      "cache_write_tokens": 292878,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 104,
+        "Read": 25,
+        "Write": 19,
+        "Edit": 8,
+        "AskUserQuestion": 2,
+        "TaskStop": 1,
+        "Agent": 1
+      }
+    },
+    {
+      "session": "df602f228e",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "ai-answer-bot",
+      "date": "2026-10-25",
+      "minutes": 84.8,
+      "human_prompts": 4,
+      "api_calls": 62,
+      "tool_calls": 68,
+      "tool_errors": 6,
+      "input_tokens": 124,
+      "output_tokens": 81811,
+      "cache_read_tokens": 9890832,
+      "cache_write_tokens": 224045,
+      "compactions": 1,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 44,
+        "Write": 10,
+        "Read": 4,
+        "Artifact": 4,
+        "Edit": 3,
+        "Skill": 2,
+        "AskUserQuestion": 1
+      }
+    },
+    {
+      "session": "f362a802c6",
+      "agent": "claude-code",
+      "kind": "subagent",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 2.2,
+      "human_prompts": 1,
+      "api_calls": 6,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "input_tokens": 12,
+      "output_tokens": 109,
+      "cache_read_tokens": 240520,
+      "cache_write_tokens": 61875,
+      "compactions": 0,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 3,
+        "Read": 1,
+        "Write": 1,
+        "SubagentHandback": 1
+      }
+    },
+    {
+      "session": "fc9e46f7f3",
+      "agent": "claude-code",
+      "kind": "main",
+      "project": "Ai-Engineer",
+      "date": "2026-10-25",
+      "minutes": 227.8,
+      "human_prompts": 20,
+      "api_calls": 210,
+      "tool_calls": 272,
+      "tool_errors": 14,
+      "input_tokens": 430,
+      "output_tokens": 274990,
+      "cache_read_tokens": 37821477,
+      "cache_write_tokens": 534983,
+      "compactions": 1,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "tools": {
+        "Bash": 131,
+        "Edit": 53,
+        "Write": 44,
+        "Read": 21,
+        "PowerShell": 7,
+        "Agent": 7,
+        "SendMessage": 4,
+        "AskUserQuestion": 3,
+        "Grep": 1,
+        "ToolSearch": 1
+      }
+    }
+  ]
+}
